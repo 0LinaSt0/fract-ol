@@ -6,7 +6,7 @@
 /*   By: msalena <msalena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:10:58 by msalena           #+#    #+#             */
-/*   Updated: 2021/10/02 17:10:59 by msalena          ###   ########.fr       */
+/*   Updated: 2021/10/02 18:00:39 by msalena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	zoom(int key_code, int *x, int *y, t_data *img)
 /* Handles of mouse signals */
 int	mouse_pos(int key_code, int x, int y, t_data *img)
 {
-	static int	x_old_j = 375;
-	static int	x_old_m = 750;
-	static int	y_old = 750;
+	static int	x_old_j = D_WIDTH / 4;
+	static int	x_old_m = D_WIDTH / 2;
+	static int	y_old = D_WIDTH / 2;
 
 	if (key_code == 4 || key_code == 5)
 	{
@@ -65,7 +65,6 @@ int	mouse_pos(int key_code, int x, int y, t_data *img)
 /* Close windows after pressing ESC */
 int	close(int key_code, t_data *img)
 {
-	printf ("key = %d\n", key_code);
 	if (key_code == 53)
 	{
 		mlx_destroy_image(img->mlx, img->img);

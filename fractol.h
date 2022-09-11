@@ -69,3 +69,4 @@ int		modern_atoi(const char *nptr);
 char	check_on_invalid_nums(char *argv);
 
 #endif
+

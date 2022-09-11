@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: msalena <msalena@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/10/02 17:38:42 by msalena           #+#    #+#              #
+#    Updated: 2021/10/02 17:38:42 by msalena          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS		= arithmetic.c checkers.c painting.c start.c
 
 OBJS		= ${SRCS:.c=.o}
@@ -16,10 +28,10 @@ LIB.a		= ${LIB}libmlx.a
 
 all:		${NAME}
 
-%.o:		%.c ${HDRS}
+%.o:		%.c ${HDRS} Makefile
 			${GCC} -c -o $@ $<
 
-$(NAME): 	complib ${OBJS}
+$(NAME): 	complib ${OBJS} Makefile
 			@${GCC} ${FLAGS} ${OBJS} ${LIB.a} -o ${NAME}
 
 complib:
@@ -33,5 +45,8 @@ clean:
 
 fclean:		clean
 			rm -f ${NAME}
+
+norm:
+			@norminette $(SRCS) $(HDRS)
 
 .PHONY:		all re clean fclean

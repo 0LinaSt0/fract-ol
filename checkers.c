@@ -33,7 +33,7 @@ int	modern_atoi(const char *nptr)
 		i++;
 	}
 	n *= z;
-	if (n < 0 || n > 1500)
+	if (n < 0 || n > D_WIDTH)
 		invalid_messag(0);
 	return (n);
 }
@@ -48,7 +48,7 @@ void	invalid_messag(int fl)
 		printf ("	julia\n\n");
 	}
 	else
-		printf ("Please, enter two numbers: from 0 to 1500\n\n");
+		printf ("Please, enter two numbers: from 0 to %d\n\n", D_WIDTH);
 	exit (0);
 }
 

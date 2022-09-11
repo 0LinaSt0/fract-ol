@@ -6,7 +6,7 @@
 /*   By: msalena <msalena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:11:06 by msalena           #+#    #+#             */
-/*   Updated: 2021/10/02 17:26:22 by msalena          ###   ########.fr       */
+/*   Updated: 2022/09/11 21:09:12 by msalena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,3 +81,4 @@ void	iterate_in_window(t_data *img, int x_input, int y_input)
 	}
 	mlx_put_image_to_window (img->mlx, img->wind, img->img, 0, 0);
 }
+

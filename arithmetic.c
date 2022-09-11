@@ -6,7 +6,7 @@
 /*   By: msalena <msalena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:11:12 by msalena           #+#    #+#             */
-/*   Updated: 2021/10/02 17:11:14 by msalena          ###   ########.fr       */
+/*   Updated: 2022/09/11 21:08:59 by msalena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,3 +77,4 @@ double	take_module(t_z_pl_c *z_c)
 {
 	return (sqrt((pow(z_c->valid_z, 2)) + (pow(z_c->imaginary_z, 2))));
 }
+
